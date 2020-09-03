@@ -1,18 +1,13 @@
 #include "Header.h"
-
-void importCoordinates(double& x, double& y)
-{
-	cout << "¬ведите координаты" << endl;
-	cout << "X: ";
-	cin >> x;
-	cout << "Y: ";
-	cin >> y;
-}
-
+#include "Maps.h"
 int main()
 {
 	setlocale(LC_CTYPE, "rus");
-	double x, y;
-	importCoordinates(x, y);
+	Map map;
+	map.importCoordinates();
+
+	map.calculate();
+	
+	map.showAngles();
 	return 0;
 }
